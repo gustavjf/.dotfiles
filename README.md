@@ -7,6 +7,7 @@ Personal development configuration files
 Make sure [RCM](https://github.com/thoughtbot/rcm) is installed.
 
 ```sh
+git clone git@github.com:gustavjf/.dotfiles.git
 lsrc
 rcup -v
 ```
