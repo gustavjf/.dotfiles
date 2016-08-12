@@ -1,0 +1,29 @@
+#!/bin/sh
+
+brew bundle --file=- <<EOF
+brew "emacs"
+brew "flow"
+brew "watchman"
+brew "go"
+brew "rust"
+EOF
+
+fancy_echo "Cloning Emacs configuration ..."
+git clone https://github.com/gustavjf/emacs.d.git $HOME/.emacs.d
+
+fancy_echo "Setting up Tmux plugins ..."
+git clone https://github.com/tmux-plugins/tpm $HOME/.tmux/plugins/tpm
+tmux source $HOME/.tmux.conf
+
+fancy_echo "Installing tmuxinator ..."
+gem_install_or_update 'tmuxinator'
+append_to_zsh "source ~/.bin/tmuxinator.zsh"
+
+fancy_echo "Cleaning up old Homebrew formulae ..."
+brew cleanup
+brew cask cleanup
+
+if [ -r "$HOME/.rcrc" ]; then
+  fancy_echo "Updating dotfiles ..."
+  rcup
+fi
