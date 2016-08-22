@@ -3,6 +3,7 @@
 	# email = [EMAIL]
 [core]
 	editor = emacs
+	excludesfile = /Users/gustavojimenez/.gitignore
 [push]
 	default = simple
 [alias]
