@@ -1,5 +1,7 @@
 # Emacs
 .dir-locals.el
+*~
+\#*#
 
 # Tern.js
 .tern-project
