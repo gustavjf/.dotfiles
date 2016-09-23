@@ -111,3 +111,10 @@ gifify() {
     echo "proper usage: gifify <input_movie.mov>. You DO need to include extension."
   fi
 }
+
+# Docker
+
+dcleanup() {
+    docker rm -v $(docker ps --filter status=exited -q 2>/dev/null) 2>/dev/null
+    docker rmi $(docker images --filter dangling=true -q 2>/dev/null) 2>/dev/null
+}
