@@ -93,6 +93,9 @@ export PATH="/usr/local/bin:$PATH"
 export NVM_DIR="$HOME/.nvm"
 source $(brew --prefix nvm)/nvm.sh
 
+# Rustup
+export PATH="$HOME/.cargo/bin:$PATH"
+
 eval "$(rbenv init - --no-rehash)"
 
 # Thanks, @SlexAxton
