@@ -6,6 +6,7 @@ brew "flow"
 brew "watchman"
 brew "go"
 brew "rust"
+brew "markdown"
 EOF
 
 fancy_echo "Cloning Emacs configuration ..."
