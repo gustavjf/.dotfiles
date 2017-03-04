@@ -93,6 +93,9 @@ export PATH="/usr/local/bin:$PATH"
 export NVM_DIR="$HOME/.nvm"
 source $(brew --prefix nvm)/nvm.sh
 
+# Yarn
+export PATH="$HOME/.yarn/bin:$PATH"
+
 # Rust
 export PATH="$HOME/.cargo/bin:$PATH"
 export RUST_SRC_PATH=~/.multirust/toolchains/stable-x86_64-apple-darwin/lib/rustlib/src/rust/src
