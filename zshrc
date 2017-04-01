@@ -96,6 +96,15 @@ source $(brew --prefix nvm)/nvm.sh
 # Yarn
 export PATH="$HOME/.yarn/bin:$PATH"
 
+# Yarn list global or local
+# (limit to depth of 1, no sub-deps)
+alias yarnG="yarn global ls --depth=0 2>/dev/null"
+alias yarnL="yarn ls --depth=0 2>/dev/null"
+
+# Yarn local yarn.lock
+# entire dep count (accurate)
+alias yarnDEP="cat yarn.lock | grep '^[^ ]' | wc -l"
+
 # Rust
 export PATH="$HOME/.cargo/bin:$PATH"
 export RUST_SRC_PATH=~/.multirust/toolchains/stable-x86_64-apple-darwin/lib/rustlib/src/rust/src
