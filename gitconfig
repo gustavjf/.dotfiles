@@ -5,6 +5,7 @@
 	editor = emacs
 	excludesfile = /Users/gustavojimenez/.gitignore
 	pager = less -FXRS -x4
+	ignorecase = false
 [push]
 	default = simple
 [alias]
